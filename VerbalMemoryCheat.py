@@ -1,6 +1,6 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-import time
+import time, mouse
 
 browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.get("https://humanbenchmark.com/tests/verbal-memory")
