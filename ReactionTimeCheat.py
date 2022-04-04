@@ -8,10 +8,8 @@ browser.maximize_window()
 
 pyautogui.click(938,599) # starts game
 
-isGreen = False
-color = pyautogui.pixel(938, 599)
-while color == "(206, 38, 54)" : # red
+while pyautogui.pixelMatchesColor(938,599, (206, 38, 54)) : # red
     color = pyautogui.pixel(938, 599)
-    if color.MatchesPixel(206, 38, 54) : # green
+    if pyautogui.pixelMatchesColor(938,599, (75, 219, 106)) : # green
         pyautogui.click(938,599) # ends game
 time.sleep(500) # keeps window open
