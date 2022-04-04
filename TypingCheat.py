@@ -13,4 +13,4 @@ text = text.replace("</span>","")
 
 pyautogui.typewrite(text)
 
-time.sleep(500)
+time.sleep(500) # keeps window open
