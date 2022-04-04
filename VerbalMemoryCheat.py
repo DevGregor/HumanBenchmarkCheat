@@ -2,8 +2,6 @@ import time, pyautogui
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
-# clicks are lined up for the buttons if the page is opened on the main screen
-
 browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.get("https://humanbenchmark.com/tests/verbal-memory")
 browser.maximize_window()

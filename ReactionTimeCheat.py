@@ -1,4 +1,3 @@
-from ast import While
 import time, pyautogui
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
