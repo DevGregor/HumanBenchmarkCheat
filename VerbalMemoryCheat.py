@@ -26,4 +26,4 @@ for x in range(100) : # change range in order to change the outcoming score
         pyautogui.click(1008,499) # presses new
         print("NEW")
         words.append(currentWord)
-time.sleep(500)
+time.sleep(500) # keeps window open
