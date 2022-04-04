@@ -9,5 +9,5 @@ def on_click(x, y, button, pressed):
 def on_scroll(x, y, dx, dy):
     print(x, y, dx, dy)
 
-with Listener(on_move=on_move, on_click=on_click, on_scroll=on_scroll) as listener:
+with Listener(on_click=on_click) as listener:
     listener.join()
