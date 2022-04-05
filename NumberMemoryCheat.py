@@ -7,6 +7,7 @@ browser.get("https://humanbenchmark.com/tests/number-memory")
 browser.maximize_window()
 
 pyautogui.click(954, 572) # presses start
+
 content = browser.page_source
 sleepTimer = 1
 
