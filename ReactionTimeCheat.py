@@ -1,17 +1,15 @@
 import time, pyautogui
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+from CodeBase import *
 
-browser = webdriver.Chrome(ChromeDriverManager().install())
-browser.get("https://humanbenchmark.com/tests/reactiontime")
-browser.maximize_window()
+browser = openBrowserTab("reactiontime")
 
-pyautogui.click(938,599) # starts game
+startBtn = getDynamicCoordinates(938,599)
+pyautogui.click(startBtn[0],startBtn[1]) # presses start
 
-while pyautogui.pixelMatchesColor(938,599, (206, 38, 54)) : # red
+while pyautogui.pixelMatchesColor(int(startBtn[0]),int(startBtn[1]), (206, 38, 54), tolerance=10) :
     print("WAIT")
 
 print("CLICK")
-pyautogui.click(938,599) # ends game
+pyautogui.click(startBtn[0],startBtn[1]) # ends game
 
 time.sleep(500) # keeps window open
