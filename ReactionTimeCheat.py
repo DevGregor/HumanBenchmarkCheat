@@ -10,7 +10,8 @@ pyautogui.click(938,599) # starts game
 
 while pyautogui.pixelMatchesColor(938,599, (206, 38, 54)) : # red
     print("WAIT")
-    if pyautogui.pixelMatchesColor(938,599, (75, 219, 106)) : # green
-        print("CLICK")
-        pyautogui.click(938,599) # ends game
+
+print("CLICK")
+pyautogui.click(938,599) # ends game
+
 time.sleep(500) # keeps window open
