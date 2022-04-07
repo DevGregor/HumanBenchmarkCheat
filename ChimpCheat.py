@@ -7,7 +7,7 @@ startBtn = getDynamicCoordinates(951, 580)
 pyautogui.click(startBtn[0],startBtn[1]) # presses start
 lvl = 0
 
-for x in range(60) : # change range in order to change the outcoming score
+for x in range(37) : # change range in order to change the outcoming score -> 37 is the max score
     targets = browser.find_elements_by_xpath("//div[@class='css-19b5rdt']/div") # gets the child div of the div with css-19b5rdt as class
     sortedTargets = browser.find_elements_by_xpath("//div[@class='css-19b5rdt']/div")
     for target in targets :

@@ -1,4 +1,3 @@
-from re import X
 import pyautogui
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager

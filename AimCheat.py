@@ -11,5 +11,5 @@ for x in range(30) : # there are 30 targets to click
     location = target.location
     print(location)
     targetBtn = getDynamicCoordinates(location["x"], location["y"])
-    pyautogui.click(targetBtn[0], targetBtn[1] + 100) # coordinates are off and need to be fixed manually
+    pyautogui.click(targetBtn[0] + 20, targetBtn[1] + 130) # coordinates are off and need to be fixed manually
 time.sleep(500) # keeps window open

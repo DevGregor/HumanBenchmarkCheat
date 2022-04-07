@@ -7,7 +7,7 @@ words = []
 startBtn = getDynamicCoordinates(938, 575)
 pyautogui.click(startBtn[0],startBtn[1]) # presses start
 
-for x in range(100) : # change range in order to change the outcoming score
+for x in range(300) : # change range in order to change the outcoming score
     content = browser.page_source
     currentWord = content.split('<div class="word">')[1].split("</div>",1)[0]
     wordSeen = False
