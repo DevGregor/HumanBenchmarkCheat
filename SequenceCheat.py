@@ -8,7 +8,7 @@ pyautogui.click(startBtn[0],startBtn[1]) # presses start
 
 currentLvl = 0
 
-for x in range(30): # change range in order to change the outcoming score
+for x in range(30) : # change range in order to change the outcoming score
     currentLvl += 1
     sequence = []
     while len(sequence) < currentLvl:
@@ -17,7 +17,7 @@ for x in range(30): # change range in order to change the outcoming score
             sequence.append(square)
         time.sleep(0.5)
     time.sleep(0.5 * currentLvl) # need to wait until squares are clickable
-    for s in sequence:
+    for s in sequence :
         print(str(sequence.index(s) + 1) + " : " + str(s.location))
         currentSquare = getDynamicCoordinates(s.location["x"], s.location["y"])
         pyautogui.click(currentSquare[0] + 100, currentSquare[1] + 150)
