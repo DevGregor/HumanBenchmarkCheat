@@ -4,7 +4,7 @@ from CodeBase import *
 browser = openBrowserTab("verbal-memory")
 words = []
 
-startBtn = getDynamicCoordinates(938, 599)
+startBtn = getDynamicCoordinates(938, 575)
 pyautogui.click(startBtn[0],startBtn[1]) # presses start
 
 for x in range(100) : # change range in order to change the outcoming score
