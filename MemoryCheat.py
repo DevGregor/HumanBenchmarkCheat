@@ -1,12 +1,8 @@
 import time, pyautogui
-from sniffio import current_async_library_cvar
 from CodeBase import *
 
 browser = openBrowserTab("memory")
-
-startBtn = getDynamicCoordinates(950, 550)
-pyautogui.click(startBtn[0],startBtn[1]) # presses start
-
+browser.find_element_by_class_name("css-de05nr.e19owgy710").click()
 currentLvl = 0
 
 for x in range(30) : # change range in order to change the outcoming score
@@ -19,6 +15,5 @@ for x in range(30) : # change range in order to change the outcoming score
             tilesShown = True
     time.sleep(3)
     for tile in tiles :
-        dynamicTileCoordinates = getDynamicCoordinates(tile.location["x"], tile.location["y"])
-        pyautogui.click(dynamicTileCoordinates[0] + 30, dynamicTileCoordinates[1] + 150)
-time.sleep(500) # keeps window open
+        pyautogui.click(tile.location["x"] + 20, tile.location["y"] + 80)
+keepWindowOpen(browser)

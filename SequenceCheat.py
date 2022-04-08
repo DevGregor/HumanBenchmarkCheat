@@ -2,9 +2,7 @@ from CodeBase import *
 import time, pyautogui
 
 browser = openBrowserTab("sequence")
-
-startBtn = getDynamicCoordinates(950, 550)
-pyautogui.click(startBtn[0],startBtn[1]) # presses start
+browser.find_element_by_class_name("css-de05nr.e19owgy710").click()
 
 currentLvl = 0
 
@@ -19,7 +17,6 @@ for x in range(30) : # change range in order to change the outcoming score
     time.sleep(0.5 * currentLvl) # need to wait until squares are clickable
     for s in sequence :
         print(s.location)
-        currentSquare = getDynamicCoordinates(s.location["x"], s.location["y"])
-        pyautogui.click(currentSquare[0] + 100, currentSquare[1] + 150)
+        pyautogui.click(s.location["x"] + 100, s.location["y"] + 150)
     print("Sequence " + str(currentLvl) + " finished")
-time.sleep(500) # keeps window open
+keepWindowOpen(browser)

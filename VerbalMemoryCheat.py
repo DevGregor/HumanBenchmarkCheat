@@ -1,11 +1,9 @@
-import time, pyautogui
 from CodeBase import *
 
 browser = openBrowserTab("verbal-memory")
+browser.find_element_by_class_name("css-de05nr.e19owgy710").click()
+buttons = browser.find_elements_by_class_name("css-de05nr.e19owgy710") # stores both the 'NEW' and 'SEEN' button
 words = []
-
-startBtn = getDynamicCoordinates(938, 575)
-pyautogui.click(startBtn[0],startBtn[1]) # presses start
 
 for x in range(300) : # change range in order to change the outcoming score
     content = browser.page_source
@@ -16,12 +14,10 @@ for x in range(300) : # change range in order to change the outcoming score
             wordSeen = True
             break
     if wordSeen == True :
-        seenBtn = getDynamicCoordinates(874, 499)
-        pyautogui.click(seenBtn[0],seenBtn[1]) # presses seen
+        buttons[0].click()
         print("SEEN")
     else :
-        newBtn = getDynamicCoordinates(1008, 499)
-        pyautogui.click(newBtn[0],newBtn[1]) # presses new
+        buttons[1].click()
         print("NEW")
         words.append(currentWord)
-time.sleep(500) # keeps window open
+keepWindowOpen(browser)
